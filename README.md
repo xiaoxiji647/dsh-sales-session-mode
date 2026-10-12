@@ -2,6 +2,8 @@
 
 适配 DSH Desktop 2.0.17 的插件。它只负责会话级开关；不连接 MCP、不保存密钥。请先在 DSH 中配置好 `skill-omniscience` MCP 服务器，并确认工具 `mcp__skill-omniscience__sales_champion_coach__query` 可调用。
 
+转发给使用者的完整步骤见 [DSH Desktop 销冠 Skill 安装指南](INSTALL_GUIDE.zh-CN.md)。
+
 ## 第一步：安装 DSH Desktop
 
 从 [DSH Desktop v2.0.17 发布页](https://github.com/anywhere-labs/dsh-desktop/releases/tag/v2.0.17) 下载对应安装包：
