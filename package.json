@@ -1,0 +1,37 @@
+{
+  "name": "dsh-sales-session-mode",
+  "version": "0.1.0",
+  "description": "Per-conversation Sales Champion mode for DSH Desktop",
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "mcp", "sales-skill"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["lib", "cordis.patch.yml", "README.md", "LICENSE"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "label": "销冠会话模式"
+  },
+  "engines": { "node": ">=18" },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.4"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check lib/core.js && node --check lib/index.js && node --check lib/client.js"
+  }
+}
